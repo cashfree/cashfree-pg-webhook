@@ -24,7 +24,7 @@ echo $matches . "</br>";
 
 function computeSignature($ts, $rawBody){
     $signStr = $ts . $rawBody;
-    $key = "b85928b6c8f941c0ff8b8252ce040280305a3f3c";
+    $key = "";
     $computeSig = base64_encode(hash_hmac('sha256', $signStr, $key, true));
     return $computeSig;
 }
